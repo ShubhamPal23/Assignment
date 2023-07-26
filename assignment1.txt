@@ -1,0 +1,63 @@
+//Prime Number Computation Function
+
+function prime(n)
+{
+    var isprime=true;
+    var i=1;
+    if(n==0 || n==1)
+    {
+        console.log("It is not a prime number")
+    }
+    else if(n>1)
+    {
+        for(i=2;i<n/2;i++)
+        {
+            if(n%i==0) 
+            {
+
+                isprime=false;
+            }
+        }
+    }
+    if(isprime)
+    console.log("It is a prime number");
+
+    else
+    console.log("It is not a prime number");   
+}
+
+//Armstrong Number Computation Function
+
+function armstrong(n)
+{
+    var temp=n+"";
+    var power=temp.length;
+    var ans=0;
+    for(var i=0;i<temp.length;i++)
+    {
+        ans+=parseInt(temp.charAt(i))**power;
+    }
+    if(ans==n)
+    {
+        console.log("Armstrong number");
+    }
+    else console.log("It is not an armstrong number"+ ans);
+}
+
+//Add Function
+
+function add()
+{
+    console.log(arguments);
+    var sum = 0;
+    for(var i=0;i<arguments.length;i++)
+    {
+        if(typeof(arguments[i]==String) && isNaN(arguments[i])==false )
+        {
+            arguments[i]=parseInt(arguments[i]);
+            sum+=arguments[i];
+        }
+       
+    }
+    return sum;
+}
