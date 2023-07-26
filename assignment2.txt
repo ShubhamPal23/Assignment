@@ -1,3 +1,23 @@
+//Current date and time
+
+
+function day_and_time()
+{
+    let date=new Date();
+    var days = {1:"Monday",2:"Tuesday",3:"Wednesday",4:"Thursday",5:"Friday",6:"Saturday",7:"Sunday"}
+    var day=days[date.getDay()];
+    console.log(`Today is: ${day}`);
+    console.log(`Current Time is: ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`)
+}
+function date()
+{
+    let date=new Date().toLocaleDateString('en-GB');
+    console.log(date);
+}
+
+
+//Addition Function
+
 function add(...arguments)
 {
     var sum=0;
