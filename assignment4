@@ -1,0 +1,16 @@
+const salaries=[11000,15000,9000,7500,18000,2000,4000];                      //Array of Salaries
+salaries.reduce((sum,curr_sal)=>(curr_sal>10000)?curr_sal+sum:sum,0)         //Sum of salaries that is greater than 10000
+
+salaries.reduce((max,curr_sal)=>(curr_sal>max)?curr_sal:max,0)               //Max Salary in the array;
+
+salaries.reduce((count,curr_sal)=>(curr_sal>10000)?(count+1):count,0)        //Number of salaries greater than 10000
+
+var employee=[{Name : "Harsh" , Salary : 40000},                             //Array of Objects 
+              {Name : "Lakshay" , Salary : 50000},
+              {Name : "Saurav" , Salary : 30000},
+              {Name : "Nishant" , Salary : 35000}]
+
+employee.sort((a,b)=>a.Salary-b.Salary)                                      //Employees sorted by Salary
+employee.sort((a,b)=>a.Name.localeCompare(b.Name))                           //Employees sorted by Name
+
+const sal_with_tax= employee.map(x=>(x.salary(x.Salary)*0.1));               //Array of salaries of employees with 10% Tax
